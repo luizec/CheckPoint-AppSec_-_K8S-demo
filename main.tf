@@ -15,6 +15,7 @@ provider "aws" {
 
 resource "aws_vpc" "my-vpc" {
   cidr_block       = "10.0.0.0/16"
+  
   tags = {
     Name = "vpc-eks-appsec"
   }
@@ -22,6 +23,7 @@ resource "aws_vpc" "my-vpc" {
 
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.my-vpc.id
+  
   tags = {
     Name = "igw-eks-appsec"
   }
@@ -30,7 +32,6 @@ resource "aws_internet_gateway" "gw" {
 
 resource "aws_route_table" "rt" {
   vpc_id = aws_vpc.my-vpc.id
-
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.gw.id
@@ -115,7 +116,6 @@ resource "aws_route_table_association" "rtassociate3" {
 resource "aws_eks_cluster" "my-ekscluster" {
   name     = "eks-appsec"
   role_arn = "arn:aws:iam::123456789012:role/eksClusterRole"
-  
   vpc_config {
     subnet_ids = [aws_subnet.my-subnet-1.id, aws_subnet.my-subnet-2.id, aws_subnet.my-subnet-3.id]
   }
