@@ -114,7 +114,7 @@ resource "aws_route_table_association" "rtassociate3" {
 
 resource "aws_eks_cluster" "my-ekscluster" {
   name     = "eks-appsec"
-  role_arn = "arn:aws:iam::134091980424:role/eksClusterRole"
+  role_arn = "arn:aws:iam::123456789012:role/eksClusterRole"
   
   vpc_config {
     subnet_ids = [aws_subnet.my-subnet-1.id, aws_subnet.my-subnet-2.id, aws_subnet.my-subnet-3.id]
@@ -125,7 +125,7 @@ resource "aws_eks_cluster" "my-ekscluster" {
 resource "aws_eks_node_group" "my-nodegroup" {
   cluster_name    = aws_eks_cluster.my-ekscluster.name
   node_group_name = "eks-ng-eks-appsec"
-  node_role_arn   = "arn:aws:iam::134091980424:role/eksWorkerRole"
+  node_role_arn   = "arn:aws:iam::123456789012:role/eksWorkerRole"
   subnet_ids      = [aws_subnet.my-subnet-1.id, aws_subnet.my-subnet-2.id, aws_subnet.my-subnet-3.id]
   instance_types  = ["t3.small"]
   disk_size       = 10
