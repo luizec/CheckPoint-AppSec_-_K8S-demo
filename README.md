@@ -16,7 +16,7 @@ If TLS is enabled for the Ingress, a Secret containing the certificate and key m
 		namespace: foo
 	data:
 		tls.crt: <base64 encoded cert>
- 	tls.key: <base64 encoded key>
+ 		tls.key: <base64 encoded key>
 	type: kubernetes.io/tls
 	
 Test star line
