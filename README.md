@@ -1,6 +1,7 @@
 # AppSec-K8S-demo
 
 This terraform project is for demoing Check Point AppSec solution on EKS (AWS) using bkimminich/juice-shop image.
+AWS cli, and helm are needed.
 
 Prior to apply the tf you will need to define the following IAM roles:
 
@@ -19,4 +20,6 @@ If TLS is enabled for the Ingress, a Secret containing the certificate and key f
  		tls.key: <base64 encoded key>
 	type: kubernetes.io/tls
 	
-Test star line
+After init/plan/apply terraform update the active context:
+
+aws eks update-kubeconfig --region <region_in_terraform.tfvars> --name eks-appsec
