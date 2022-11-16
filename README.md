@@ -11,10 +11,7 @@ In terraform.tfvars add the AWS region you want the cluster is deployed to, AK a
 
 If TLS is enabled for the Ingress, a Secret containing the certificate and key must also be provided in secret-juice.yaml:
 
-apiVersion: v1
-  kind: Secret
+ apiVersion: v1
+ kind: Secret
    namespace: foo
-  data:
-    tls.crt: <base64 encoded cert>
-    tls.key: <base64 encoded key>
-  type: kubernetes.io/tls
+   
