@@ -41,6 +41,7 @@ kubectl apply -f '/.../.../secret-juice.yaml'
 Download helm chart using the following command:
 
 wget https://github.com/CheckPointSW/Infinity-Next/raw/main/deployments/cp-k8s-appsec-nginx-ingress-4.0.1.tgz -O cp-k8s-appsec-nginx-ingress-4.0.1.tgz   
+
 (version can change during time)
 
 Deploy the ingress controller by running:
