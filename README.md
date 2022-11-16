@@ -5,6 +5,6 @@ This terraform project is for demoing Check Point AppSec solution on EKS (AWS) u
 Prior to apply the tf you will need to define the following IAM roles:
 
   * eksClusterRole: AWS service (EKS Cluster) with attached AmazonEKSClusterPolicy policy
-  * eksWorkerRole: AWS Service (EC2) with attached AmazonEKSWorkerNodePolic, AmazonEC2ContainerRegistryReadOnly, AmazonEKS_CNI_Policy, AmazonEBSCSIDriverPolicy policies
+  * eksWorkerRole: AWS Service (EC2) with attached AmazonEKSWorkerNodePolicy, AmazonEC2ContainerRegistryReadOnly, AmazonEKS_CNI_Policy, AmazonEBSCSIDriverPolicy policies
 
 In terraform.tfvars add the AWS region you want the cluster is deployed to, AK and SK for authentication
