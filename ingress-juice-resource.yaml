@@ -7,11 +7,11 @@ metadata:
 spec:
   tls:
   - hosts:
-      - < list of your hosts. Ex. juice.yourdomain.com >
+      - <list of your hosts. Ex. juice.yourdomain.com>
     secretName: juice-secret
   ingressClassName: nginx
   rules:
-  - host: < host that will have this rules aplied on. Ex. juice.yourdomain.com >
+  - host: <host that will have this rules applied on. Ex. juice.yourdomain.com>
     http:
       paths:
       - path: /
