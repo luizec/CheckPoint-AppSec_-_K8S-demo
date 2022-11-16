@@ -48,7 +48,7 @@ helm install cp-k8s-appsec-nginx-ingress-4.0.1.tgz --name-template cp-appsec --s
 
 (you can copy the commands from the profile of the agent protecting the asset)
 
-This will create an LB in AWS. Need to create a CNAME record in your domain as follows:
+This will deploy a LB in AWS. Need to create a CNAME record in your domain as follows:
 
 juice.yourdomain.com -> "A record of the LB"
 
