@@ -7,7 +7,7 @@ Prior to apply the tf you will need to define the following IAM roles:
   * eksClusterRole: AWS service (EKS Cluster) with attached AmazonEKSClusterPolicy policy
   * eksWorkerRole: AWS Service (EC2) with attached AmazonEKSWorkerNodePolicy, AmazonEC2ContainerRegistryReadOnly, AmazonEKS_CNI_Policy, AmazonEBSCSIDriverPolicy policies
 
-In terraform.tfvars add the AWS region you want the cluster is deployed to, AK and SK for authentication
+In terraform.tfvars add the AWS region you want the cluster is deployed to, AK and SK for authentication.
 
 If TLS is enabled for the Ingress, a Secret containing the certificate and key for juice.yourdomain.com must also be provided in secret-juice.yaml:
 
