@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: appsec-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+  - hosts:
+      - < list of your hosts. Ex. juice.yourdomain.com >
+    secretName: juice-secret
+  ingressClassName: nginx
+  rules:
+  - host: < host that will have this rules aplied on. Ex. juice.yourdomain.com >
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: juice-shop-clusterip
+            port:
+              number: 8080
