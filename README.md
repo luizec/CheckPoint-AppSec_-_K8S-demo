@@ -9,7 +9,7 @@ Prior to apply the tf you will need to define the following IAM roles:
 
 In terraform.tfvars add the AWS region you want the cluster is deployed to, AK and SK for authentication
 
-If TLS is enabled for the Ingress, a Secret containing the certificate and key must also be provided in secret-juice.yaml:
+If TLS is enabled for the Ingress, a Secret containing the certificate and key for juice.yourdomain.com must also be provided in secret-juice.yaml:
 
 	apiVersion: v1
 	kind: Secret
