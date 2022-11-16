@@ -23,9 +23,10 @@ If TLS is enabled for the Ingress, a Secret containing the certificate and key f
 	
 In Check Point Infinity portal (https://portal.checkpoint.com) has to be defined the following Asset (using K8S deployment):
 
-
-
-After init/plan/apply terraform update the active K8S context:
+![k8sasset](https://user-images.githubusercontent.com/77104796/202153311-5dacd93e-5ec3-489d-b87c-ec169d9be45e.PNG)
+  
+  
+After init/plan/apply terraform, update the active K8S context:
 
 aws eks update-kubeconfig --region <region_in_terraform.tfvars> --name eks-appsec
 
