@@ -1,6 +1,7 @@
 # AppSec-K8S-demo
 
-This terraform project is for demoing Check Point AppSec solution on EKS (AWS) using bkimminich/juice-shop image.  
+This terraform project is for demoing Check Point AppSec solution on EKS (AWS) using bkimminich/juice-shop image.
+
 AWS cli, and helm are needed.
 
 Prior to apply the tf you will need to define the following IAM roles:
