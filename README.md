@@ -1,4 +1,4 @@
-# AppSec-K8S-demo
+# Chak Point AppSec-K8S-demo
 
 This terraform project is for demoing Check Point AppSec solution on EKS (AWS) using bkimminich/juice-shop image.
 
