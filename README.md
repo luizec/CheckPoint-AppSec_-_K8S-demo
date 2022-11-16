@@ -27,4 +27,9 @@ aws eks update-kubeconfig --region <region_in_terraform.tfvars> --name eks-appse
 
 Create the deployment:
 
-kubectl apply -f '/some/path/juiceshop.yml'
+kubectl apply -f '/.../.../juiceshop.yml'
+
+In case TLS is enabled, create a secret on the K8S cluster:
+
+kubectl apply -f '/.../.../secret-juice.yaml'
+
