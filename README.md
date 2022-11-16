@@ -38,3 +38,22 @@ In case TLS is enabled, create a secret on the K8S cluster:
 
 kubectl apply -f '/.../.../secret-juice.yaml'
 
+Download helm chart using the following command:
+
+wget https://github.com/CheckPointSW/Infinity-Next/raw/main/deployments/cp-k8s-appsec-nginx-ingress-4.0.1.tgz -O cp-k8s-appsec-nginx-ingress-4.0.1.tgz
+
+Deploy the ingress controller by running:
+
+helm install cp-k8s-appsec-nginx-ingress-4.0.1.tgz --name-template cp-appsec --set appsec.agentToken="cp-..."
+
+(you can copy the commands from the profile of the agent protecting the asset)
+
+This will create an LB in AWS. Need to create a CNAME record in your domain as follows:
+
+juice.yourdomain.com -> "A record of the LB"
+
+Configure the Ingress resource:
+
+kubectl apply -f '/.../.../ingress-juice-resource.yaml'
+
+Enforce the policy in infinity portal and you are ready for testing the solution.
