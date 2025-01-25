@@ -1,5 +1,6 @@
 variable "region" {
   type = string
+  default = "eu-south-1"
 }
 
 variable "access-key" {
